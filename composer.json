@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "tekintian\\": "src"
+            "tekintian\\qrcode_tiny\\": "src"
         }
     }
 }

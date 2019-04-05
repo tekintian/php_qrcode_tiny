@@ -1,6 +1,11 @@
 <?php
 
-namespace tekintian;
+namespace tekintian\qrcode_tiny;
+
+use tekintian\qrcode_tiny\QRencode;
+use tekintian\qrcode_tiny\QRspec;
+use tekintian\qrcode_tiny\QRsplit;
+use tekintian\qrcode_tiny\QRtools;
 
 /**
  * PHP qrcode 二维码工具类 精简版本
@@ -9,11 +14,11 @@ namespace tekintian;
  * @Last Modified 2019-04-05
  */
 // phpqrcode lib库文件载入
-require_once __DIR__ . DIRECTORY_SEPERATOR . 'qrcode_tiny_lib.php';
+// require_once __DIR__ . DIRECTORY_SEPARATOR . 'qrcode_tiny_lib.php';
 /**
  * PHP qrcode 二维码工具类 精简版本
  */
-class QRcodeTiny {
+class MakeQrcode {
 
 	public $version;
 	public $width;

@@ -1,5 +1,6 @@
 <?php
 
+namespace tekintian\qrcode_tiny;
 /*
  * PHP QR Code encoder
  *
