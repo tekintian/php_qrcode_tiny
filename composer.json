@@ -10,7 +10,7 @@
         "forum": "https://github.com/tekintian/php_qrcode_tiny",
         "source": "https://github.com/tekintian/php_qrcode_tiny"
     },
-    "version":"2.0",
+    "version":"1.0",
     "require": {
         "php": "^5.3|^7.0"
     },
