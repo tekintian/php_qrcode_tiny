@@ -21,7 +21,11 @@ $qr_name = 'myqr.png';
 $qr_error_correction_level = 'L'; //纠错级别：L、M、Q、H
 $qr_matrix_point_size = 10; //二维码矩阵点大小，单位：点， 1到10 数值越大生成的图片就越大
 
-\tekintian\qrcode_tiny\MakeQrcode::png($qr_data, $qr_name, $qr_error_correction_level, $qr_matrix_point_size, 2); 
+# 使用方法一
+\tekintian\QRcodeTiny::png($qr_data, $qr_name, $qr_error_correction_level, $qr_matrix_point_size, 2); 
+
+# 使用方法二
+\tekintian\qrcode_tiny\Qrcode::png($qr_data, $qr_name, $qr_error_correction_level, $qr_matrix_point_size, 2); 
 
 
 ~~~
@@ -38,7 +42,7 @@ require_once __DIR__ . 'vendor/autoload.php';
 $data = 'http://dev.yunnan.ws'; //二维码数据
 $qr_error_correction_level = 'L'; //纠错级别：L、M、Q、H
 $qr_matrix_point_size = 10; //二维码图片的大小，单位：点， 1到10
-\tekintian\qrcode_tiny\MakeQrcode::png($data, 'myqr.png', $qr_error_correction_level, $qr_matrix_point_size, 2); //不带Logo二维码的文件名
+\tekintian\qrcode_tiny\Qrcode::png($data, 'myqr.png', $qr_error_correction_level, $qr_matrix_point_size, 2); //不带Logo二维码的文件名
 //echo "二维码已生成" . "<br />";
 $logo = 'logo.png'; //需要显示在二维码中的Logo图像
 $QR = 'myqr.png';
@@ -59,7 +63,7 @@ if ($logo !== false) {
 
 // 输出图像到浏览器
 header('Content-Type: image/png');
-imagepng($QR); //输出带Logo二维码图片到浏览器, More: https://www.php.net/manual/zh/function.imagepng.php
+imagepng ( $QR, 'qr/qr.png' ); //输出带Logo二维码图片到浏览器, More: https://www.php.net/manual/zh/function.imagepng.php
 
 exit();
 //qr end

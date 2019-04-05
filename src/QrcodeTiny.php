@@ -10,11 +10,7 @@ use tekintian\qrcode_tiny\QRencode;
  * @Date:   2019-04-05 11:53:34
  * @Last Modified 2019-04-05
  */
-// phpqrcode lib库文件载入
-// require_once __DIR__ . DIRECTORY_SEPARATOR . 'qrcode_tiny_lib.php';
-/**
- * PHP qrcode 二维码工具类 精简版本
- */
+
 class QrcodeTiny {
 
 	public $version;
