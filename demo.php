@@ -15,7 +15,7 @@ require_once __DIR__ . 'vendor/autoload.php';
 $data = 'http://dev.yunnan.ws'; //二维码数据
 $errorCorrectionLevel = 'L'; //纠错级别：L、M、Q、H
 $matrixPointSize = 10; //二维码图片的大小，单位：点， 1到10
-\tekintian\qrcode_tiny\MakeQrcode::png($data, 'myqr.png', $errorCorrectionLevel, $matrixPointSize, 2); //不带Logo二维码的文件名
+\tekintian\QrcodeTiny::png($data, 'myqr.png', $errorCorrectionLevel, $matrixPointSize, 2); //不带Logo二维码的文件名
 //echo "二维码已生成" . "<br />";
 $logo = 'logo.png'; //需要显示在二维码中的Logo图像
 $QR = 'myqr.png';
@@ -32,11 +32,10 @@ if ($logo !== false) {
 	$from_width = ($QR_width - $logo_qr_width) / 2;
 	imagecopyresampled($QR, $logo, $from_width, $from_width, 0, 0, $logo_qr_width, $logo_qr_height, $logo_width, $logo_height);
 }
-//imagepng ( $QR, 'qr/qr.png' );//带Logo二维码的文件名
 
 // 输出图像到浏览器
 header('Content-Type: image/png');
-imagepng($QR); //带Logo二维码的文件名
+imagepng($QR, 'qr/qr.png'); //带Logo二维码的文件名
 
 exit();
 //qr end
